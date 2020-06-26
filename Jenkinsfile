@@ -1,4 +1,5 @@
-podTemplate(containers: [ 
+String label = "superpod"
+podTemplate(label: label ,containers: [ 
     containerTemplate(
       name: 'docker', 
       image: 'docker', 
@@ -36,7 +37,7 @@ podTemplate(containers: [
     hostPathVolume(mountPath: '/usr/local/bin/helm', hostPath: '/usr/local/bin/helm')
   ]
   ) {
-    node('mypod') {
+    node(label) {
         stage('Get latest version of code') {
           checkout scm
         }
