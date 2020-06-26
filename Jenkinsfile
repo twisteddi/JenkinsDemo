@@ -1,4 +1,4 @@
-podTemplate(label: 'mypod', serviceAccount: 'jenkins-ci', cloud: https://192.168.110.228:8443, containers: [ 
+podTemplate(label: 'mypod', serviceAccount: 'jenkins-ci', , containers: [ 
     containerTemplate(
       name: 'docker', 
       image: 'docker', 
